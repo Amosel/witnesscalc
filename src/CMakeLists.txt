@@ -71,3 +71,15 @@ add_library(witnesscalc_authV2Static STATIC ${AUTHV2_SOURCES})
 set_target_properties(witnesscalc_authV2Static PROPERTIES OUTPUT_NAME witnesscalc_authV2)
 
 target_compile_definitions(witnesscalc_authV2Static PUBLIC CIRCUIT_NAME=authV2)
+
+# onAddLeaf
+set(OAL_SOURCES ${LIB_SOURCES}
+    onAddLeaf.cpp
+    witnesscalc_Oal.h
+    witnesscalc_Oal.cpp
+    )
+
+add_library(witnesscalc_OalStatic STATIC ${OAL_SOURCES})
+set_target_properties(witnesscalc_OalStatic PROPERTIES OUTPUT_NAME witnesscalc_Oal)
+
+target_compile_definitions(witnesscalc_OalStatic PUBLIC CIRCUIT_NAME=onAddLeaf)

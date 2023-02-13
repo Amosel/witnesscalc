@@ -33,6 +33,7 @@ add_subdirectory(src)
 
 install(TARGETS
     witnesscalc_authV2Static
+    witnesscalc_OalStatic
     fr
     RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin
     BUNDLE DESTINATION ${CMAKE_INSTALL_PREFIX}/app
@@ -43,9 +44,11 @@ install(FILES "${GMP_LIB_DIR}/${GMP_LIB_FILE}"
 
 install(FILES
     src/authV2.dat
+    src/onAddLeaf.dat
     DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
 install(FILES
     src/witnesscalc.h
     src/witnesscalc_authV2.h
+    src/witnesscalc_Oal.h
     DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
